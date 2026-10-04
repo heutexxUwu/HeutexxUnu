@@ -1,0 +1,161 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jensonhirst/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Made By heute :)", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local Tab = Window:MakeTab({
+	Name = "Get chracters :)",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Dupe"
+})
+
+
+Tab:AddButton({
+	Name = "Heian Sukuna",
+	Callback = function()
+      		print("button pressed")
+	  local args = {
+	[1] = "Heian Sukuna",
+	[2] = "Normal",
+	[3] = "Ultimate",
+	n = 3,
+}
+game:GetService("ReplicatedStorage").Events.RewardEscape:FireServer(unpack(args, 1, args.n or #args))
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "Heian Sukuna (Golden)",
+	Callback = function()
+      		print("button pressed")
+	  local args = {
+	[1] = "Heian Sukuna",
+	[2] = "Golden",
+	[3] = "Ultimate",
+	n = 3,
+}
+game:GetService("ReplicatedStorage").Events.RewardEscape:FireServer(unpack(args, 1, args.n or #args))
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "Heian Sukuna (Diamond)",
+	Callback = function()
+      		print("button pressed")
+	  local args = {
+	[1] = "Heian Sukuna",
+	[2] = "Diamond",
+	[3] = "Ultimate",
+	n = 3,
+}
+game:GetService("ReplicatedStorage").Events.RewardEscape:FireServer(unpack(args, 1, args.n or #args))
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "Heian Sukuna(Neon)",
+	Callback = function()
+      		print("button pressed")
+	  local args = {
+	[1] = "Heian Sukuna",
+	[2] = "Neon",
+	[3] = "Ultimate",
+	n = 3,
+}
+game:GetService("ReplicatedStorage").Events.RewardEscape:FireServer(unpack(args, 1, args.n or #args))
+  	end    
+})
+
+
+local Section = Tab:AddSection({
+	Name = "Others"
+})
+
+
+Tab:AddButton({
+	Name = "Goku(Neon)",
+	Callback = function()
+      		print("button pressed")
+	  local args = {
+	[1] = "Saiyan Goku",
+	[2] = "Neon",
+	[3] = "Ultimate",
+	n = 3,
+}
+game:GetService("ReplicatedStorage").Events.RewardEscape:FireServer(unpack(args, 1, args.n or #args))
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "Gojo(Neon)",
+	Callback = function()
+      		print("button pressed")
+	  local args = {
+	[1] = "Hollow Gojo",
+	[2] = "Neon",
+	[3] = "Ultimate",
+	n = 3,
+}
+game:GetService("ReplicatedStorage").Events.RewardEscape:FireServer(unpack(args, 1, args.n or #args))
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Others",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+Tab:AddButton({
+	Name = "Sell all",
+	Callback = function()
+      		print("button pressed")
+	  local args = {
+	[1] = "Inventory",
+	n = 1,
+}
+game:GetService("ReplicatedStorage").Events.RequestSell:FireServer(unpack(args, 1, args.n or #args))
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "Upgrade Speed",
+	Callback = function()
+      		print("button pressed")
+	  local args = {
+	[1] = "Speed",
+	[2] = "Max",
+	n = 2,
+}
+game:GetService("ReplicatedStorage").Events.RequestUpgradeAction:FireServer(unpack(args, 1, args.n or #args))
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "Rebirth",
+	Callback = function()
+      		print("button pressed")
+	  game:GetService("ReplicatedStorage").Events.RequestRebirth:FireServer()
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "Base Upgrade",
+	Callback = function()
+      		print("button pressed")
+	  game:GetService("ReplicatedStorage").Events.RequestBaseUpgrade:FireServer()
+  	end    
+})
+
+
+OrionLib:Init()
